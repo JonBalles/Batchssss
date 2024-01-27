@@ -9,7 +9,7 @@ set "wpName=fondo.jpg"
 ::Copiar imagen a carpeta usuario
 set "userPictureFolder=%USERPROFILE%\Pictures"
 
-copy "%WalpapaerPath%" "%userPictureFolder%" "wpName"
+copy "%wallpaperPath%" "%userPictureFolder%" "wpName"
 
 :: Establecer el fondo de pantalla
 reg add "%regkey%" /v Wallpaper /t REG_SZ /d "%userPictureFolder%\%wpName%" /f 
@@ -19,4 +19,5 @@ reg add "%regkey%" /v WallpaperStyle /t REG_SZ /d 0 /fondo
 
 
 echo Reiniciar para aplicar cambios
-eof
+echo Configuración finalizada
+timeout /t 3 /nobreak >nul

@@ -2,7 +2,7 @@
 setlocal
 
 set "usuarioAlumno=Alumno"
-set "usuarioJardin=Jardin"
+set "usuarioKinder=Kinder"
 
 :: Verificar si el usuario Alumno existe
 net user %usuarioAlumno% >nul 2>nul
@@ -13,13 +13,13 @@ if %errorlevel% neq 0 (
     echo El usuario %usuarioAlumno% ya existe.
 )
 
-:: Verificar si el usuario Jardin existe
-net user %usuarioJardin% >nul 2>nul
+:: Verificar si el usuario Kinder existe
+net user %usuarioKinder% >nul 2>nul
 if %errorlevel% neq 0 (
-    echo Creando usuario %usuarioJardin%...
-    net user %usuarioJardin% 2 /add
+    echo Creando usuario %usuarioKinder%...
+    net user %usuarioKinder% 2 /add
 ) else (
-    echo El usuario %usuarioJardin% ya existe.
+    echo El usuario %usuarioKinder% ya existe.
 )
 
 echo Proceso completado.
